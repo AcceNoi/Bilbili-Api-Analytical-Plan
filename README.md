@@ -39,4 +39,27 @@ data.cards[].desc.type：具体的一个动态的类型，已知的有：
 | 64   | 专栏动态。专栏id（cvid）的对应字段为id                       |
 | 128  |                                                              |
 | 256  | 音频动态。音频id（auid）的对应字段为id                       |
+| 512  | 番剧                                                         |
 
+## 2. B站搜索-by Accen
+
+https://api.bilibili.com/x/web-interface/search/type
+
+**GET**
+
+请求参数
+
+| 参数        | 说明                                                         |
+| ----------- | ------------------------------------------------------------ |
+| page        | 分页                                                         |
+| keyword     | 搜索关键字                                                   |
+| search_type | 搜索类型：<br />bili_user：用户<br />media_ft：影视<br />media_bangumi：番剧<br />video：视频<br />live：直播<br />article：专栏<br />topic：话题<br />photo：相簿<br />（可能还有activity，bangumi，card，live_all，live_master，live_room，live_user，movie，operation_card，pgc，special，tv，upuser，user） |
+| order       | 排序                                                         |
+| category_id |                                                              |
+| order_sort  |                                                              |
+| context     |                                                              |
+
+
+综合搜索
+https://api.bilibili.com/x/web-interface/search/all/v2
+没有search_type字段，其他和上述基本一致
